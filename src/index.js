@@ -1,13 +1,17 @@
-const { loadFilesSync } = require('@graphql-tools/load-files')
-const { mergeTypeDefs } = require('@graphql-tools/merge')
-const { print } = require('graphql')
+const core = require('@actions/core');
+const github = require('@actions/github');
+
+const {loadFilesSync} = require('@graphql-tools/load-files')
+const {mergeTypeDefs} = require('@graphql-tools/merge')
+const {print} = require('graphql')
 const fs = require('fs')
 
-async function run() {
-    const loadedFiles = loadFilesSync(`C:/Users/Staud/IdeaProjects/auth-service/src/main/resources/graphql/public/**/*.graphqls`)
+try {
+    const nameToGreet = core.getInput('path');
+    const loadedFiles = loadFilesSync(nameToGreet)
     const typeDefs = mergeTypeDefs(loadedFiles)
     const printedTypeDefs = print(typeDefs)
-    fs.writeFileSync('joined.graphql', printedTypeDefs)
+    core.setOutput("fileContent", printedTypeDefs);
+} catch (error) {
+    core.setFailed(error.message);
 }
-
-run();

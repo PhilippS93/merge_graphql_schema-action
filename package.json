@@ -2,9 +2,10 @@
   "name": "merge_graphql_schema-action",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "ncc build src/index.js -o dist"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,12 @@
   "bugs": {
     "url": "https://github.com/PhilippS93/merge_graphql_schema-action/issues"
   },
-  "homepage": "https://github.com/PhilippS93/merge_graphql_schema-action#readme"
+  "homepage": "https://github.com/PhilippS93/merge_graphql_schema-action#readme",
+  "devDependencies": {
+    "@vercel/ncc": "^0.34.0"
+  },
+  "dependencies": {
+    "@actions/core": "^1.10.0",
+    "@actions/github": "^5.1.1"
+  }
 }
