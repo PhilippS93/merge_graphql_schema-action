@@ -1,0 +1,19 @@
+{
+  "name": "merge_graphql_schema-action",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PhilippS93/merge_graphql_schema-action.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PhilippS93/merge_graphql_schema-action/issues"
+  },
+  "homepage": "https://github.com/PhilippS93/merge_graphql_schema-action#readme"
+}
