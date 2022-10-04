@@ -1,10 +1,8 @@
 const core = require('@actions/core');
-const github = require('@actions/github');
 
 const {loadFilesSync} = require('@graphql-tools/load-files')
 const {mergeTypeDefs} = require('@graphql-tools/merge')
 const {print} = require('graphql')
-const fs = require('fs')
 
 try {
     const nameToGreet = core.getInput('path');

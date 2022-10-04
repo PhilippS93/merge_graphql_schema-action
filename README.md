@@ -1,21 +1,21 @@
-# Hello world javascript action
+# Merge GraphQL Schema Action
 
-This action prints "Hello World" or "Hello" + the name of a person to greet to the log.
+This action merges all graphql files fo a specific path using `@graphql-tools/merge` and outputs the merged string.
 
 ## Inputs
 
-## `who-to-greet`
+## `path`
 
-**Required** The name of the person to greet. Default `"World"`.
+**Required** Glob pattern or patterns to use when loading GraphQl files. Default `"./**/*.graphqls"`.
 
 ## Outputs
 
-## `time`
+## `fileContent`
 
-The time we greeted you.
+String of merged GraphQL files.
 
 ## Example usage
 
-uses: actions/hello-world-javascript-action@v1.1
-with:
-who-to-greet: 'Mona the Octocat'
+    uses: PhilippS93/merge_graphql_schema-action@v1.7
+        with:
+            path: './**/*.graphqls'

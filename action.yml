@@ -1,15 +1,15 @@
-name: 'Thank You Action'
-description: 'Say "Thank You" to new pull requests'
+name: 'GraphQL Schema merge'
+description: 'Merge GraphQL schema files into one string'
 author: 'Philipp Staudt'
 
 inputs:
-  path:  # id of input
-    description: 'Who to greet'
+  path:
+    description: 'Glob pattern or patterns to use when loading GraphQl files'
     required: true
-    default: 'World'
+    default: './**/*.graphqls'
 outputs:
-  fileContent: # id of output
-    description: 'The time we greeted you'
+  fileContent:
+    description: 'String of merged GraphQL files'
 runs:
   using: 'node12'
   main: 'dist/index.js'
