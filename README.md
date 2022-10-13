@@ -4,7 +4,7 @@ This action merges all graphql files fo a specific path using `@graphql-tools/me
 
 ## Inputs
 
-## `path`
+- `path` - The graphql schema path. Can use Glob pattern matching
 
 **Required** Glob pattern or patterns to use when loading GraphQl files. Default `"./**/*.graphqls"`.
 
